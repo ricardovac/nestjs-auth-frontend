@@ -53,19 +53,17 @@ export default function SignUp() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12}>
                 <TextField
-                  value='interface'
                   autoComplete="given-name"
-                  name="fname"
+                  name="name"
                   required
                   fullWidth
-                  id="fname"
+                  id="name"
                   label="Fullname"
                   autoFocus
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  value='interface@ui.com'
                   required
                   fullWidth
                   id="email"
@@ -76,7 +74,6 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  value='Abc@123'
                   required
                   fullWidth
                   name="password"
@@ -88,7 +85,6 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  value='Abc@123'
                   required
                   fullWidth
                   name="confirmPassword"

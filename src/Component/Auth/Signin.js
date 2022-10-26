@@ -66,7 +66,6 @@ export default function SignIn(props) {
               name="email"
               autoComplete="email"
               autoFocus
-              value='ricardoviicius@gmail.com'
             />
             <TextField
               margin="normal"
@@ -77,7 +76,6 @@ export default function SignIn(props) {
               type="password"
               id="password"
               autoComplete="current-password"
-              value='Abc@123'
             />
             <Typography component="p" variant="p" color="red">
               {errorMessage}
