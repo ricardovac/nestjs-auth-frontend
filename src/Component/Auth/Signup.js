@@ -24,8 +24,6 @@ export default function SignUp() {
   const [open, setOpen] = React.useState(false);
   let navigate = useNavigate();
 
-
-
   const [text, setText] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
 
@@ -55,7 +53,7 @@ export default function SignUp() {
     };
 
     axios.post("http://localhost:3000/user", form)
-      .then(response => console.log(response))
+      .then(response => navigate('/'))
       .catch(function (error) {
         if (error) {
           setOpen(true);
