@@ -15,7 +15,7 @@ export default function Router(props) {
       <BrowserRouter>
         {isLoggedIn ?
           <Routes>
-            <Route path="/" element={setLoggedIn = { setLoggedIn }}>
+            <Route path="/login" element={setLoggedIn = { setLoggedIn }}>
             </Route>
             <Route path="/:id" element={{ setLoggedIn }}>
             </Route>

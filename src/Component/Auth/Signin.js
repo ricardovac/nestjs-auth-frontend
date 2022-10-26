@@ -23,10 +23,10 @@ export default function SignIn(props) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const form = {
-      name: data.get('name'),
-      email: data.get('email'),
-      password: data.get('password'),
-      confirmPassword: data.get('confirmPassword')
+      name: formData.get('name'),
+      email: formData.get('email'),
+      password: formData.get('password'),
+      confirmPassword: formData.get('confirmPassword')
     };
     const { data } = await axios.post("http://localhost:3000/login", form);
     if (data.status === parseInt('401')) {
@@ -37,6 +37,7 @@ export default function SignIn(props) {
       navigate('/');
     }
   };
+
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -65,6 +66,7 @@ export default function SignIn(props) {
               name="email"
               autoComplete="email"
               autoFocus
+              value='ricardoviicius@gmail.com'
             />
             <TextField
               margin="normal"
@@ -75,6 +77,7 @@ export default function SignIn(props) {
               type="password"
               id="password"
               autoComplete="current-password"
+              value='Abc@123'
             />
             <Typography component="p" variant="p" color="red">
               {errrorMessage}
