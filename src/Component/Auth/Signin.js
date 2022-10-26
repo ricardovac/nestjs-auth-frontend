@@ -16,7 +16,7 @@ const theme = createTheme();
 
 export default function SignIn(props) {
   const { setIsLoggedIn } = props;
-  const [errrorMessage, setErrorMessage] = React.useState('');
+  const [errorMessage, setErrorMessage] = React.useState('');
   let navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -34,7 +34,7 @@ export default function SignIn(props) {
     } else {
       localStorage.setItem('token', data.token);
       setIsLoggedIn(true);
-      navigate('/');
+      navigate('/home');
     }
   };
 
@@ -80,7 +80,7 @@ export default function SignIn(props) {
               value='Abc@123'
             />
             <Typography component="p" variant="p" color="red">
-              {errrorMessage}
+              {errorMessage}
             </Typography>
             <Button
               type="submit"
@@ -92,12 +92,12 @@ export default function SignIn(props) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="/Signup" variant="body2">
+                <Link href="/signup" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="SignUp" variant="body2">
+                <Link href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

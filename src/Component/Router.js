@@ -24,7 +24,7 @@ export default function Router(props) {
           <Routes>
             <Route path="/" element={<SignIn setIsLoggedIn={setLoggedIn} isLoggedIn={isLoggedIn} />}>
             </Route>
-            <Route path="/user" element={<SignUp setIsLoggedIn={setLoggedIn} />}>
+            <Route path="/signup" element={<SignUp setIsLoggedIn={setLoggedIn} />}>
             </Route>
           </Routes>
         }
