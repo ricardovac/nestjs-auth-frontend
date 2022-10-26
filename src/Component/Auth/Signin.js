@@ -27,6 +27,5 @@ export default function SignIn(props) {
       setIsLoggedIn(true);
       navigate('/');
     }
-
   };
 }
