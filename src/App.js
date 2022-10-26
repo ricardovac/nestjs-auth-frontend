@@ -1,12 +1,12 @@
+import { useState } from 'react';
 import './App.css';
-import SignIn from './Component/Auth/Signin';
-import SignUp from './Component/Auth/Signup';
+import Router from './Component/Router';
 
 function App() {
+  const [isLoggedIn, setLoggedIn] = useState(false);
   return (
     <>
-      <SignUp />
-      <SignIn />
+      <Router isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn} />
     </>
   );
 }
